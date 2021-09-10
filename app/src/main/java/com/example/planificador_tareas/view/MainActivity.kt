@@ -55,9 +55,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun crearTarea(id: Int, titulo: String, completado: Boolean) {
         val root: LinearLayout = binding.vlContenedorTarea
-        val nuevaTarea = manejadorTarea.crearTarea(id, titulo, completado)
-        root.addView(nuevaTarea)
-
+        try {
+            val nuevaTarea = manejadorTarea.crearTarea(id, titulo, completado)
+            root.addView(nuevaTarea)
+        } catch(e: NullPointerException){
+            Toast.makeText(this, "La tarea debe llevar un título", Toast.LENGTH_LONG).show()
+        }
     }
 
 }

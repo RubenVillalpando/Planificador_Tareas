@@ -39,6 +39,8 @@ class Tarea(spTitulos: SharedPreferences, spCompletado: SharedPreferences, conte
 
     fun crearTarea(id: Int, titulo: String, completado: Boolean): LinearLayout{
 
+        if (titulo.isEmpty()) throw(NullPointerException())
+
         context.resources.displayMetrics
 
         //crear checkbox
