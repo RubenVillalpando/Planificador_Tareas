@@ -9,38 +9,15 @@
 
 
     <ScrollView
-        android:id="@+id/svContenedorTareas"
+        android:id="@+id/svScrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:id="@+id/vlContenedorTarea"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="left"
-            android:orientation="horizontal">
-
-            <CheckBox
-                android:id="@+id/checkBox"
-                android:layout_width="48dp"
-                android:layout_height="48dp" />
-
-            <TextView
-                android:id="@+id/tvTituloTarea"
-                android:layout_width="300dp"
-                android:layout_height="match_parent"
-                android:gravity="left|center_vertical"
-                android:text="@string/string_ejemplo_de_tarea"
-                android:textAlignment="gravity"
-                android:textSize="20sp" />
-
-            <ImageButton
-                android:id="@+id/btnBorrarTarea"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:src="@android:drawable/ic_menu_delete"
-                tools:ignore="SpeakableTextPresentCheck" />
-
-        </LinearLayout>
+            android:orientation="vertical"/>
     </ScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
