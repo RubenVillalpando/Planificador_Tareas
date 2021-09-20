@@ -1,14 +1,19 @@
 package com.example.planificador_tareas.view
 
+import android.R.attr
 import android.content.Context
 import android.content.SharedPreferences
 import android.util.DisplayMetrics
 import android.view.Gravity
 import android.view.View
-import android.widget.CheckBox
-import android.widget.ImageButton
+import android.widget.*
+import com.example.planificador_tareas.R
+import android.R.attr.button
+
 import android.widget.LinearLayout
-import android.widget.TextView
+
+
+
 
 
 class Tarea(spTitulos: SharedPreferences, spCompletado: SharedPreferences, context:Context) {
@@ -59,7 +64,11 @@ class Tarea(spTitulos: SharedPreferences, spCompletado: SharedPreferences, conte
 
         //crear boton eliminar
         val botonEliminar= ImageButton(context)
-        botonEliminar.setImageResource(android.R.drawable.ic_menu_delete)
+        val layoutParams = LinearLayout.LayoutParams(48.toPx(context), 48.toPx(context))
+        botonEliminar.setLayoutParams(layoutParams)
+        botonEliminar.setImageResource(R.drawable.btn_trash)
+        botonEliminar.scaleType = ImageView.ScaleType.FIT_CENTER
+
 
         //crear el linearLayout
         val nuevaTarea = LinearLayout(context)
